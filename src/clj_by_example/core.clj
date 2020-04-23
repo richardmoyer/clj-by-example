@@ -44,3 +44,13 @@
 
 (clojure.set/subset? #{1 2} #{1 2 3 4}) ;; => true
 (clojure.set/subset? #{1 5} #{1 2 3 4}) ;; => false
+
+(map inc [1 2 3])
+(map inc `(1 2 3)) ; must quote lists
+
+(map key {:a 1 :b 2 :c 3})
+;
+;lists vectors sets and maps are all "seqable"
+(type (seq `(1 2 3)))
+
+(concat)
