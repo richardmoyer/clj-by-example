@@ -53,4 +53,12 @@
 ;lists vectors sets and maps are all "seqable"
 (type (seq `(1 2 3)))
 
-(concat)
+(concat '(1 2) '(3 4) '(5 6))
+
+(map (fn [x] (inc (val x))) {:a 1 :b 2 :c 3})
+
+(reduce + [1 2 3 4])
+
+(reduce + '(1 2 3 4)) ; must quote list
+
+(reduce (fn [res val] (+ res val)) [1 2 3 4])
