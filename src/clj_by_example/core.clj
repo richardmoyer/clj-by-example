@@ -68,4 +68,22 @@
 (into (list) [1 2 3])
 (into #{} [1 2 3])
 
-(iterate + 1)
+(range 1 21)
+
+(mod 27 7)
+
+(repeatedly 5 (fn [] (println "Lets go Red Sox!!!!")))
+
+(doseq [animal ["donkey" "cow" "cowdonnkey"]] (println animal))
+
+(doseq [n1 [1 2]
+        n2 [4 5]]
+  (println (+ n1 n2)))
+
+(take 11 (range 0 100))
+
+(drop 1 (take 11 (range 0 100)))
+
+(drop-while neg? [-3 -2 -1 0 1 2 3])
+
+(filter (fn [x] (> x 0)) (take 11 (range 0 21)))
