@@ -62,3 +62,10 @@
 (reduce + '(1 2 3 4)) ; must quote list
 
 (reduce (fn [res val] (+ res val)) [1 2 3 4])
+
+(into [1 2 3] `(4 5 6))
+(into [] `(1 2 3))
+(into (list) [1 2 3])
+(into #{} [1 2 3])
+
+(iterate + 1)
